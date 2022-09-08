@@ -14,6 +14,9 @@ import numpy as np
 #Основная идея состоит в том, чтобы использовать функцию np.where() для преобразования всех значений «Y» в True, а все остальное — в False.
 df["column"] = np.where(df["column"] == "Y", True, False)
 
+#to_datetime метод, который автоматически преобразует дату в првавильный формат
+df[["datetime", "datetime"]] = pd.to_datetime(df[["datetime", "datetime"]].stack(), format='%m/%d/%Y %H:%M:%S %p').unstack()
+
 #Изменение типов данных при конвертации из csv в DataFrame
 df_2 = pd.read_csv("sales_data_types.csv",
                    dtype={'Customer Number': 'int'},
