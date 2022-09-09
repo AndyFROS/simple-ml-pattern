@@ -69,3 +69,10 @@ ax.set_ylabel('Количество заражённых')
 ax.set_title('Предсказание заражённых для United States')
 plt.legend()
 plt.show()
+
+
+
+import pickle
+# save the model to disk
+filename = 'finalized_model.sav'
+pickle.dump(results, open(filename, 'wb'))
