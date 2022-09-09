@@ -57,7 +57,7 @@ sklearn.metrics.calinski_harabasz_score(X, df1["KMCLUSTS"])
 sklearn.metrics.davies_bouldin_score(X, df1["KMCLUSTS"])
 
 #Вывод среднего количества данных на кластер
-df1.groupby(["KMCLUSTS"])["passenger_count"].mean()
+df1.groupby(["KMCLUSTS"])["total_sum"].mean()
 
 #Полулярность кластеров
 df1["KMCLUSTS"].value_counts()
